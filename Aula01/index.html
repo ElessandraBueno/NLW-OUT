@@ -4,7 +4,10 @@
   <head> <!--No HEAD vem configurações da página-->
     <title>NLW Heat</title>
     <style>
-      /* <!--Tudo que estiver dentro de STYLE identificado antes das chaves, vai ser aplicado a todos os comandos com a mesma descrição. Exemplo: abaixo está a estilização de H1, que será aplicado a todas as tags <h1> neste arquivo--> */
+      /* <!--Tudo que estiver dentro de STYLE identificado antes das chaves, 
+        vai ser aplicado a todos os comandos com a mesma descrição. 
+        Exemplo: abaixo está a estilização de H1, que será aplicado 
+        a todas as tags <h1> neste arquivo--> */
       h1 {
         font-size: 2.5rem;
         color:rgb(179, 18, 228);
@@ -13,6 +16,14 @@
       a {
         font-size: 1.3rem;
         color:blueviolet;
+        text-decoration: none; /*Tira o sublinado e qualquer outro estilo*/
+      }
+      html,body {
+        height: 100%;
+      }
+      body{
+        display: grid;
+        place-items: center; /*Deixa o conteúdo de body centralizado*/
       }
     </style>
   </head>
