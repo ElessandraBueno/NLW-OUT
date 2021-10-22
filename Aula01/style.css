@@ -1,0 +1,24 @@
+html,
+body {
+  height: 100%;
+}
+body{
+  display: grid;
+  place-items: center; /*Deixa o conteúdo de body centralizado*/
+}
+main{
+  background: url(images/Mobile.svg);
+  width: 375px;
+  height: 812px;
+
+}
+h1 {
+  font-size: 2.5rem;
+  color:rgb(179, 18, 228);
+  background-color:black;
+}
+a {
+  font-size: 1.3rem;
+  color:blueviolet;
+  text-decoration: none; /*Tira o sublinhado e qualquer outro estilo*/
+}

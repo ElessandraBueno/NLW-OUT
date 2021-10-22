@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 
 <html>
-  <head> <!--No HEAD vem configurações da página-->
+  <head>
+    <!--No HEAD vem configurações da página-->
     <title>NLW Heat</title>
-    <style>
-      /* <!--Tudo que estiver dentro de STYLE identificado antes das chaves, 
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style> Tudo que estiver dentro de STYLE identificado antes das chaves, 
         vai ser aplicado a todos os comandos com a mesma descrição. 
         Exemplo: abaixo está a estilização de H1, que será aplicado 
-        a todas as tags <h1> neste arquivo--> */
-      h1 {
-        font-size: 2.5rem;
-        color:rgb(179, 18, 228);
-        background-color:black;
-      }
-      a {
-        font-size: 1.3rem;
-        color:blueviolet;
-        text-decoration: none; /*Tira o sublinado e qualquer outro estilo*/
-      }
-      html,body {
-        height: 100%;
-      }
-      body{
-        display: grid;
-        place-items: center; /*Deixa o conteúdo de body centralizado*/
-      }
-    </style>
+        a todas as tags <h1> neste arquivo </style>-->
   </head>
   <body>
-    <h1>Teste de H1</h1>
-    <a href="https://github.com/ElessandraBueno?tab=repositories">ele_bueno.github</a>
+    <main>
+      <div class="content">
+        <div class="avatar">
+          <img src="images/build.svg" alt="Selo Rocketseat" />
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+          />
+        </div>
+
+        <h1>Elessandra Bueno</h1>
+        <a href="https://github.com/ElessandraBueno?tab=repositories">
+          <img src="images/github.svg" alt="Ícone GitHub" /> ElessandraBueno</a
+        >
+        <p>An instructor focused on helping pople start programming for web</p>
+        <ul>
+          <li>
+            <a href="https://youtube.com" target="_blank">
+              <img src="images/youtube.svg" alt="Ícone Youtube" />
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook.svg" alt="Ícone facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/instagram.svg" alt="Ícone Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank">
+              <img src="images/twitter.svg" alt="Ícone Twitter" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
   </body>
 </html>
