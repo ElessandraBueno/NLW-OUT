@@ -1,24 +1,70 @@
+*{
+  margin: 0; /*Deixa a página somente com o tamanho do conteúdo sem barra de rolagem*/
+}
 html,
 body {
+
+  --black:hsl(240, 6%, 13%);
+  --gray:hsl(240,9%,89%); /*Declaração de varável que pode ser usada no documento inteiro. Essa variável deixa a cor mais leve*/
+
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased; /*-WebKit significa que a determinada ação vai acontecer somente nos navegadores kit*/
 }
 body{
   display: grid;
-  place-items: center; /*Deixa o conteúdo de body centralizado*/
+  place-items: center; /*Deixa o conteúdo de body centralizado, inclusive a imagem de fundo. OBS só é opssível com o grid acima*/
 }
 main{
-  background: url(images/Mobile.svg);
+  background: url(images/mobile.png);
   width: 375px;
   height: 812px;
+}
+.container{
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /*Deixa o conteúdo centralizado, mas só pode ser usado para texto ou propriedades que recebem texto*/
 
+  color: var(--gray);
+}
+.avatar{
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative; /*Referencia para o absolute abaixo, se não adicionado, o topo do absolute é considerado o da página inteira e não da classe avatar*/
+}
+.avatar span{
+  position: absolute; 
+  top: -15px;
+  z-index: 1; /*Indica o posicionamento no eixo Z*/
+}
+.avatar > img { /*A seta indica que este estilo será aplicado apenas no primeiro nível da classe, ou seja, nas imagens que estiverem dentro de .avatar e não que estiverem em avatar e outra tag dentro de avatar como a span*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*Serve para deixar a imagem no formato e tamnho normal*/
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 h1 {
-  font-size: 2.5rem;
-  color:rgb(179, 18, 228);
-  background-color:black;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
 a {
-  font-size: 1.3rem;
-  color:blueviolet;
+  color: var(--gray);
   text-decoration: none; /*Tira o sublinhado e qualquer outro estilo*/
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.75rem; /*Espaço entre os elementos. OBS: Só funciona se o flex tiver sido declarado antes*/
+  justify-content: center; /*Deixa o conteúdo centralizado. OBS: Só funciona se o flex tiver sido declarado antes*/
+  align-items: center; /*Garante que o conteúdo está centralizado*/
+}
+p{
+  margin-top: 2rem;
+}
+ul{
+  margin-top: 4rem;
+  list-style: none; /*Retira as bolinhas*/
+  padding: 0; /*Deixa alinhado sem espaço de padding*/
+  display: flex; /*Faz com que os elementos fiquem um ao lado do outro na horizontal*/
+  gap: 0.5rem; /*Espaço entre os elementos. OBS: Só funciona se o flex tiver sido declarado antes*/
+  justify-content: center; /*Deixa o conteúdo centralizado. OBS: Só funciona se o flex tiver sido declarado antes*/
 }
