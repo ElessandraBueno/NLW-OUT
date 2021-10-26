@@ -7,16 +7,25 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /> <!--Link da fonte da imagem que está sendo exibida no site e foi puxada do site online LOREMPIXEL -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!--Link da fonte da imagem que está sendo exibida no site e foi puxada do site online LOREMPIXEL -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
-    />
+    /> <!-- Link da fonte Roboto que está sendo utilizado nesse site/projeto, direto do google fontes -->
+
     <!-- <style> Tudo que estiver dentro de STYLE identificado antes  das chaves, 
         vai ser aplicado a todos os comandos com a mesma descrição. 
         Exemplo: abaixo está a estilização de H1, que será aplicado 
         a todas as tags <h1> neste arquivo </style>-->
+
+          <!--Exemplo de que o JS lê da esquerda para a direita, de cima para baixo e um comando após o outro
+          <script>
+            alert('Oi');
+            alert('Hi');
+            alert('JSCodandoo');
+          </script> -->
+
   </head>
   <body>
     <main>
@@ -62,5 +71,18 @@
         </ul>
       </div>
     </main>
+    <script>
+      /*Todas as variáveis precisam ser definidas como let (quando o conteúdo/valor pode ser alterado) ou const (quando o conteúdo/valor é fixo e não pode ser alterado)*/
+      let user = {
+        name: 'Elessandra Bueno',
+        phone: 123456789,
+        accept: true
+      }
+
+      user.name = 'Nazaré R.' /*Muda o valor da variável*/
+
+      alert(user.name)
+      alert(user.phone)
+    </script>
   </body>
 </html>
