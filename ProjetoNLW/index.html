@@ -50,22 +50,22 @@
         <p>An instructor focused on helping pople start programming for web</p>
 
         <ul id="SocialLinks">
-          <li class = "youtube">
+          <li class="youtube">
             <a href="https://youtube.com" target="_blank">
               <img src="images/youtube.svg" alt="Ícone Youtube" />
             </a>
           </li>
-          <li class ="facebook">
+          <li class="facebook">
             <a href="https://facebook.com" target="_blank">
               <img src="images/facebook.svg" alt="Ícone facebook" />
             </a>
           </li>
-          <li class ="instagram">
+          <li class="instagram">
             <a href="https://instagram.com" target="_blank">
               <img src="images/instagram.svg" alt="Ícone Instagram" />
             </a>
           </li>
-          <li class = "twitter">
+          <li class="twitter">
             <a href="https://twitter.com" target="_blank">
               <img src="images/twitter.svg" alt="Ícone Twitter" />
             </a>
@@ -73,60 +73,9 @@
         </ul>
       </div>
     </main>
-    <script>
-      /*Todas as variáveis precisam ser definidas como let (quando o conteúdo/valor pode ser alterado) ou const (quando o conteúdo/valor é fixo e não pode ser alterado)*/
 
-      /*let user = {
-        name: 'Elessandra Bueno',
-        phone: 123456789,
-        accept: true
-      }
+    <script src="main.js"></script> 
+    <!--Comando para atrelar este arquivo ao main.js, que é onde contém nosso código em JS. Obs: Pode ser adicionado no head e no body, porém é importante saber a lódgica do código, pois o JS tem a ordem de execução (esquerda > direita, cima > baixo, uma depois da outra). Nesse caso, por exemplo, esse comando não poderia ser adicionado no head porque precisamos que o main seja executado primeiro para buscar as infos do DOM em seguida.-->
 
-      user.name = 'Nazaré R.' /*Muda o valor da variável/*
-
-      alert(user.name)
-      alert(user.phone)*/
-
-      /*Formas  de declarar um objeto ou variável:
-      -camelCase: Todas as palavras juntas, sem espaço, sendo que a primeira palavra é toda minúscula e as demais com a primeira letra em maiúscula;
-      -PascalCase: Todas as palavras juntas, sem espaço e com a primeira letra de todas as palavras em maiúscula;
-      -snake_case: Todas as palavras são separadas por underline e todas são escritas em letras minúsculas (nenhuma palavra em letra maiúscula.
-     */
-      const LinksSocialMedia = {
-        github: 'ElessandraBueno',
-        youtube: 'jakelinygracielly',
-        facebook: 'maykbrito',
-        instagram: 'ele.bueno_',
-        twitter: 'jakelinytec'
-      }
-      /* Explicação sobre a função abaixo:
-        document é o comando para acessar o DOM.
-        .get é o comando para pegar alguma informação do DOM;
-        ElementById é o comando para especificar de onde iremos pegar esse elemento/info, no caso do ID.
-        ('UserName') é o comando onde especificamos qual informações dos Ids desse arquivo estamos buscando*/
-      /*textContent é o comando para alterar o conteúdo do elemento especificado acima. E pode ser usado também da seguinte forma:
-        UsraName.textContent = "Olivia"*/
-      /*O comando let li of SocialLinks.children, também pode ser escrito:
-      let li of SocialLinks.textContent*/
-      /*Para chamar o conteúdo da li, utilizamos li.children[0].href, onde 0 é aposição do filho que deseja-se atrelar. Obs: O computador conta a partir de 0, não se 1.
-      O comando .href, é para informar ao sistema que queremos buscar/modificar aquele atributo dentro do filho [0].
-      Como queremos alterar o link dos ícones no site, na frente de href põe-se = 'endereço do link', porém se for feito apenas assim, o link inserido anteriormente, será aplicado a todos os filhos de todas as li. 
-      Para alterar o endereço do link de acorodo com uma informação/dado específico, usa-se crase ao invés de apóstrofe e o conteúdo a ser alterado é identificado por ${LOCAL DO DADO}:
-      `https://${social}.com/${LinksSocialMedia[social]}`
-      */
-
-      function changeLinksSocialMedia() {
-        document.getElementById('UserName').textContent = 'Elessandra Bueno'
-
-        for (let li of SocialLinks.children) {
-          const social = li.getAttribute('class')
-          
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          alert(li.children[0].href) 
-        }
-      }
-      changeLinksSocialMedia()
-    </script>
   </body>
 </html>
