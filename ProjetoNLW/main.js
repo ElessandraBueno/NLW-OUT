@@ -40,7 +40,7 @@ const LinksSocialMedia = {
         */
 
 function ChangeLinksSocialMedia() {
-  document.getElementById('UserName').textContent = 'Elessandra Bueno'
+  document.getElementById('UserName').textContent = 'Testeeee'
 
   for (let li of SocialLinks.children) {
     const social = li.getAttribute('class')
@@ -57,7 +57,15 @@ ChangeLinksSocialMedia()
 function GetGitHubProfileInfos() {
   const url = `https://api.github.com/users/${LinksSocialMedia.github}`
 
-  
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+  /* document.getElementById('UserName').textContent = data.name*/
+  UserName.textContent = data.name /*Faz com que o nome que aparecerá no crachá, seja o mesmo do github. Poderia ser usado o código acima para fazer isso também.*/
+  UserLink.href = data.html_url
+  UserImage.src = data.avatar_url
+  UserLogin.textContent = data.login
+})
 }
 
 GetGitHubProfileInfos()
